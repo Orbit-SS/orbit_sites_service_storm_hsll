@@ -1,0 +1,203 @@
+{
+  "site": {
+    "name": "Hoag Land Services",
+    "abbreviation": "HLS",
+    "tagline": "Central Florida • Site • Tree • Fence",
+    "established": 2017,
+    "legal_name": "Hoag Land Services, LLC",
+    "url": "https://hlsdeland.com"
+  },
+  "contact": {
+    "phone": "(386) 561-0003",
+    "phone_tel": "+13865610003",
+    "email": "tyler@hlsdeland.com",
+    "location": "DeLand, FL",
+    "service_areas": ["DeLand", "DeLeon Springs", "Surrounding rural Central Florida areas", "Residential neighborhoods and acreage properties"]
+  },
+  "social": {
+    "facebook": "https://facebook.com/hoaglandservices",
+    "instagram": "https://instagram.com/hls_deland"
+  },
+  "navigation": [
+    { "label": "Home", "href": "index.html" },
+    { "label": "About", "href": "about.html" },
+    { "label": "Services", "href": "services.html" },
+    { "label": "Portfolio", "href": "portfolio.html" },
+    { "label": "Join Our Team", "href": "join.html" },
+    { "label": "Contact", "href": "contact.html" }
+  ],
+  "pages": {
+    "home": {
+      "hero": {
+        "eyebrow": "Central Florida • Site • Tree • Fence",
+        "heading": "Site work, tree services, and fencing for residential & commercial properties.",
+        "subheading": "Serving DeLand, DeLeon Springs, and surrounding Central Florida areas.",
+        "cta_primary": { "label": "Find out how HLS can help you.", "href": "contact.html" }
+      },
+      "services_section": {
+        "heading": "Services",
+        "cards": [
+          {
+            "title": "Site Services",
+            "description": "Land clearing, grading, driveways and drainage.",
+            "image": "photos/site1.JPEG"
+          },
+          {
+            "title": "Tree Services",
+            "description": "Trimming, removals and storm clean-up.",
+            "image": "photos/tree5.JPEG"
+          },
+          {
+            "title": "Fence Services",
+            "description": "Perimeter, pasture and privacy fencing.",
+            "image": "photos/fence5.jpeg"
+          }
+        ]
+      },
+      "footer_tagline": "Site work, tree services, and fencing for residential & commercial properties.",
+      "footer_service_area": "Serving DeLand, DeLeon Springs, and surrounding Central Florida areas."
+    },
+    "about": {
+      "heading": "About Hoag Land Services",
+      "subheading": "Local, experienced land services in Central Florida.",
+      "sections": [
+        {
+          "heading": "Our story",
+          "body": "HLS officially came to life in 2019 by CEO Tyler Hoag however, the foundation was built many years before. With over a decade of experience in the utility forestry and construction sector our intention and direction for HLS became clear."
+        },
+        {
+          "body": "The business began as a single tractor service serving residential clients in the greater DeLand area. With time, opportunity, and education, HLS has grown into a certified arborist tree service and a full site service. HLS is supported by knowledgeable, driven and durable team members who surpass customer expectations."
+        }
+      ],
+      "cta": { "label": "Ready to walk through your property?", "href": "contact.html" }
+    },
+    "services": {
+      "heading": "Central Florida • Residential & Commercial",
+      "intro": "Site services, tree services, and fencing services for residential and commercial properties across Central Florida.",
+      "categories": [
+        {
+          "title": "Site Services",
+          "image": "photos/site4.PNG",
+          "items": [
+            "Land Clearing: from an acre to hundreds of acres",
+            "Earth works and Excavation: Soil removal and replacement, grading, building pads, roads, ponds, Right of ways",
+            "Erosion Control: Installation and maintenance of silt fences, swales and culverts",
+            "Environmental services: Forestry mulching/mowing, invasive tree mitigation, herbicide treatments, right of way wet land access and roads"
+          ]
+        },
+        {
+          "title": "Tree Services",
+          "image": "photos/tree5.JPEG",
+          "certifications": ["ISA Certified Arborist", "ISA Tree Risk Assessment Qualified"],
+          "items": [
+            "Tree Removal",
+            "Tree Trimming: Removal of weak, dead or dying limbs",
+            "Palm Pruning",
+            "Tree installation: Palms, hard woods, evergreens"
+          ]
+        },
+        {
+          "title": "Fence Services",
+          "image": "photos/fence5.jpeg",
+          "items": [
+            "Wood: board, privacy, barbed wire, field, horse fence",
+            "Vinyl: privacy, picket, ranch style",
+            "Aluminum: estates, pools, residential/commercial"
+          ]
+        }
+      ]
+    },
+    "portfolio": {
+      "heading": "Portfolio",
+      "intro": "Browse a few recent jobs by service type.",
+      "collections": [
+        {
+          "title": "Fencing Projects",
+          "images": ["fence1.jpeg", "fence3.jpeg", "fence4.jpeg", "fence5.jpeg", "fence6.jpeg", "fence7.jpeg", "fence8.jpeg", "fence9.jpeg", "fence12.jpg"]
+        },
+        {
+          "title": "Site Work & Land Clearing",
+          "images": ["site1.JPEG", "site4.PNG", "site18.JPEG"]
+        },
+        {
+          "title": "Tree Work",
+          "images": ["tree1.jpeg", "tree2.jpeg", "tree3.jpeg", "tree5.JPEG", "tree6.jpeg", "tree7.jpeg", "tree8.jpeg", "tree9.jpeg", "tree10.jpeg", "tree11.jpeg", "tree16.jpeg", "tree17.jpeg", "tree18.jpeg", "tree19.jpeg"]
+        }
+      ],
+      "footer_cta": { "label": "Have a similar project in mind? Start a conversation.", "href": "contact.html" }
+    },
+    "contact": {
+      "heading": "Contact Us",
+      "intro": "Tell us a little about your property and what you're hoping to accomplish. We will follow up to ask any additional questions and schedule a time to walk the property if needed.",
+      "service_area_note": "We are based near DeLand and typically serve: DeLand & DeLeon Springs, Surrounding rural Central Florida areas, Residential neighborhoods and acreage properties.",
+      "direct_contact_note": "If you reach us after hours, leave a brief message with your name, property location, and what you're looking to do.",
+      "form": {
+        "fields": [
+          { "name": "name", "label": "Name", "type": "text", "required": true },
+          { "name": "email", "label": "Email", "type": "email", "required": true },
+          { "name": "phone", "label": "Phone", "type": "tel", "required": false },
+          {
+            "name": "service",
+            "label": "Service needed",
+            "type": "select",
+            "required": true,
+            "options": ["Site Services", "Tree Services", "Fencing Services"]
+          },
+          { "name": "location", "label": "Property location (city / area)", "type": "text", "required": false },
+          {
+            "name": "message",
+            "label": "How can we help?",
+            "type": "textarea",
+            "required": true,
+            "hint": "A few details about the property size, access, and your goals are helpful."
+          }
+        ],
+        "submit_label": "Send message"
+      }
+    },
+    "join": {
+      "heading": "Join Our Team",
+      "intro": "We are always interested in connecting with dependable people who take pride in their work and respect customers' properties.",
+      "positions": ["Equipment operator", "Tree crew", "Fence installer", "General labor", "Other / mixed experience"],
+      "process_note": "We review submissions as needed based on current and upcoming projects. If there is a potential fit, we will reach out to talk more about your experience and next steps.",
+      "form": {
+        "fields": [
+          { "name": "name", "label": "Name", "type": "text", "required": true },
+          { "name": "email", "label": "Email", "type": "email", "required": true },
+          { "name": "phone", "label": "Phone", "type": "tel", "required": false },
+          { "name": "position", "label": "Position of interest", "type": "select", "required": true },
+          { "name": "experience", "label": "Tell us about your experience", "type": "textarea", "required": true }
+        ],
+        "submit_label": "Apply"
+      }
+    }
+  },
+  "images": {
+    "logo": "photos/HLSlogo-nobackground.png",
+    "hero_background": "photos/logo_enhanced.png",
+    "og_image": "photos/og-image.jpg",
+    "site_services": ["site1.JPEG", "site4.PNG", "site18.JPEG"],
+    "tree_services": ["tree1.jpeg", "tree2.jpeg", "tree3.jpeg", "tree5.JPEG", "tree6.jpeg", "tree7.jpeg", "tree8.jpeg", "tree9.jpeg", "tree10.jpeg", "tree11.jpeg", "tree16.jpeg", "tree17.jpeg", "tree18.jpeg", "tree19.jpeg"],
+    "fence_services": ["fence1.jpeg", "fence3.jpeg", "fence4.jpeg", "fence5.jpeg", "fence6.jpeg", "fence7.jpeg", "fence8.jpeg", "fence9.jpeg", "fence12.jpg"],
+    "downloaded_to": "/vercel/sandbox/brand/images/"
+  },
+  "footer": {
+    "brand": "Hoag Land Services, LLC est. 2017",
+    "tagline": "Site work, tree services, and fencing for residential & commercial properties.",
+    "service_area": "Serving DeLand, DeLeon Springs, and surrounding Central Florida areas.",
+    "copyright": "© 2025 Hoag Land Services. All rights reserved."
+  },
+  "schema_org": {
+    "@type": "Organization",
+    "name": "Hoag Land Services",
+    "url": "https://hlsdeland.com",
+    "telephone": "+13865610003",
+    "email": "tyler@hlsdeland.com",
+    "address": {
+      "addressLocality": "DeLand",
+      "addressRegion": "FL",
+      "addressCountry": "US"
+    },
+    "areaServed": "Central Florida"
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "brand": {
+    "name": "Hoag Land Services",
+    "abbreviation": "HLS",
+    "tone": "Straightforward, trustworthy, hardworking, local",
+    "industry": "Land services — site work, tree services, fencing",
+    "target_audience": "Residential and commercial property owners in Central Florida",
+    "value_propositions": [
+      "ISA Certified Arborist on staff",
+      "Over a decade of utility forestry and construction experience",
+      "Knowledgeable, driven, durable team members",
+      "Serves both residential acreage and commercial properties",
+      "Local to DeLand, FL"
+    ]
+  },
+  "colors": {
+    "primary": {
+      "brand_green": "#2E7D32",
+      "description": "Main brand color — used for header/nav background, check marks, form focus states"
+    },
+    "accent": {
+      "warm_brown": "#B66E41",
+      "description": "Secondary accent — used for links, bullet dots, card accent bars, service section underline, required field markers, btn-accent"
+    },
+    "background": {
+      "white": "#FFFFFF",
+      "surface": "#F4F5F7",
+      "beige": "#F2E8C6",
+      "dark": "#1F2933",
+      "footer": "#101623"
+    },
+    "text": {
+      "primary": "#2F2F2F",
+      "muted": "#6B7280",
+      "light": "#E5E7EB",
+      "very_light": "#9CA3AF"
+    },
+    "utility": {
+      "border": "#E5E7EB",
+      "error": "#B91C1C",
+      "success": "#166534"
+    },
+    "hero_overlay": "linear-gradient(135deg, rgba(11,44,25,0.70), rgba(11,44,25,0.50))",
+    "alt_accent_options": {
+      "set_b": "#586C3D",
+      "set_c": "#2F5D3A",
+      "set_d": "#4B3A2A"
+    }
+  },
+  "typography": {
+    "font_stack": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Apple Color Emoji\", \"Segoe UI Emoji\", sans-serif",
+    "family": "System sans-serif (no custom web font)",
+    "weights": {
+      "normal": 400,
+      "medium": 500,
+      "semibold": 600
+    },
+    "sizes": {
+      "h1_mobile": "2rem",
+      "h1_desktop": "2.4rem",
+      "h2_mobile": "1.75rem",
+      "h2_desktop": "2rem",
+      "body": "1rem",
+      "small": "0.95rem",
+      "caption": "0.9rem",
+      "label": "0.85rem",
+      "micro": "0.8rem"
+    },
+    "line_height": 1.6,
+    "letter_spacing": {
+      "brand_name": "0.08em",
+      "section_heading": "0.02em",
+      "pill_labels": "0.12em"
+    },
+    "text_transforms": {
+      "brand_name": "uppercase",
+      "hero_eyebrow": "uppercase",
+      "pill_labels": "uppercase"
+    }
+  },
+  "spacing": {
+    "scale": {
+      "0": "0",
+      "1": "0.25rem",
+      "2": "0.5rem",
+      "3": "0.75rem",
+      "4": "1rem",
+      "5": "1.25rem",
+      "6": "1.5rem",
+      "8": "2rem",
+      "10": "2.5rem",
+      "12": "3rem",
+      "16": "4rem"
+    },
+    "section_padding": "2.5rem 0",
+    "section_tight_padding": "1.5rem 0",
+    "hero_padding": "3rem 0 2.5rem"
+  },
+  "layout": {
+    "max_width": "1100px",
+    "breakpoints": {
+      "md": "768px",
+      "lg": "1024px",
+      "portfolio_2col": "600px",
+      "portfolio_3col": "900px"
+    },
+    "grid_columns": {
+      "services_cards": "repeat(auto-fit, minmax(220px, 1fr))",
+      "portfolio": "1 col → 2 col at 600px → 3 col at 900px",
+      "footer": "1 col → 3 col (2fr 1.5fr 1.2fr) at 768px",
+      "two_column": "1.2fr 1fr at 768px"
+    }
+  },
+  "border_radius": {
+    "default": "10px",
+    "pill": "999px"
+  },
+  "shadows": {
+    "default": "0 6px 20px rgba(0,0,0,0.08)",
+    "card_hover": "0 18px 38px rgba(0,0,0,0.12)",
+    "header": "0 2px 6px rgba(0,0,0,0.15)"
+  },
+  "components": {
+    "header": {
+      "background": "#2E7D32 (brand green)",
+      "text": "#FFFFFF",
+      "position": "sticky top-0 z-40",
+      "logo_height": "50px"
+    },
+    "hero": {
+      "background": "linear-gradient overlay on logo_enhanced.png",
+      "overlay": "linear-gradient(135deg, rgba(11,44,25,0.70), rgba(11,44,25,0.50))",
+      "text": "#FFFFFF",
+      "subtitle_color": "rgba(255,255,255,0.88)",
+      "eyebrow_style": "inline-block pill, rgba(0,0,0,0.16) background, uppercase, 0.85rem",
+      "min_height_landing": "70vh"
+    },
+    "buttons": {
+      "base": "inline-flex, pill shape (radius-pill), 0.95rem, font-weight 500, transitions",
+      "primary": "background #FFFFFF, color brand-green; hover: beige background",
+      "outline": "transparent bg, beige border and text; hover: rgba(255,255,255,0.12) bg",
+      "accent": "background #B66E41, text #FFFFFF; hover: #9b5533",
+      "ghost": "transparent bg, accent text; hover: surface background"
+    },
+    "cards": {
+      "base": "background #FFFFFF, border-radius 10px, box-shadow default, 1px border rgba(15,23,42,0.03)",
+      "service_card": "6px accent-gradient top bar, hover lift (-3px translateY), 16:10 image ratio, full-width CTA button",
+      "soft": "no shadow, border-color border-color var"
+    },
+    "footer": {
+      "background": "#101623",
+      "text": "#E5E7EB",
+      "border_top": "rgba(148,163,184,0.35)",
+      "bottom_text": "#9CA3AF"
+    },
+    "forms": {
+      "input_radius": "10px",
+      "border_color": "#E5E7EB",
+      "focus_outline": "2px solid #2E7D32",
+      "required_marker_color": "#B66E41",
+      "textarea_min_height": "140px"
+    },
+    "portfolio": {
+      "item_style": "border-radius 10px, overflow hidden, hover scale(1.03) + opacity 0.9",
+      "collection_cards": "dark bg with rgba(0,0,0,0.2), hover lift with accent border"
+    },
+    "lightbox": {
+      "overlay": "fixed inset-0, rgba(0,0,0,0.9), z-index 60",
+      "max_width": "900px"
+    }
+  },
+  "animations": {
+    "reveal_on_scroll": "opacity 0→1, translateY 20px→0, duration 0.6s ease",
+    "card_hover": "transform 160ms ease, box-shadow 160ms ease",
+    "image_hover_scale": "transform 220ms ease",
+    "lightbox": "opacity 0.2s ease",
+    "portfolio_image_hover": "transform 0.25s ease, opacity 0.25s ease"
+  },
+  "assets": {
+    "logo": {
+      "filename": "HLSlogo-nobackground.png",
+      "local_path": "/vercel/sandbox/brand/images/HLSlogo-nobackground.png",
+      "original_url": "https://hlsdeland.com/photos/HLSlogo-nobackground.png",
+      "usage": "Navigation header logo, 50px height"
+    },
+    "hero_background": {
+      "filename": "logo_enhanced.png",
+      "local_path": "/vercel/sandbox/brand/images/logo_enhanced.png",
+      "original_url": "https://hlsdeland.com/photos/logo_enhanced.png",
+      "usage": "Hero section background image, covered by dark green gradient overlay"
+    },
+    "portfolio_images": {
+      "fence": ["fence1.jpeg", "fence3.jpeg", "fence4.jpeg", "fence5.jpeg", "fence6.jpeg", "fence7.jpeg", "fence8.jpeg", "fence9.jpeg", "fence12.jpg"],
+      "site": ["site1.JPEG", "site4.PNG", "site18.JPEG"],
+      "tree": ["tree1.jpeg", "tree2.jpeg", "tree3.jpeg", "tree5.JPEG", "tree6.jpeg", "tree7.jpeg", "tree8.jpeg", "tree9.jpeg", "tree10.jpeg", "tree11.jpeg", "tree16.jpeg", "tree17.jpeg", "tree18.jpeg", "tree19.jpeg"],
+      "note": "Some images (site2-9, site10-17, fence2, fence10-12.jpeg, tree4, tree12-15, og-image.jpg) returned 404 from the live server"
+    }
+  },
+  "css_source": {
+    "filename": "styles.css",
+    "original_url": "https://hlsdeland.com/css/styles.css",
+    "note": "Fetched successfully from /css/styles.css path during scrape"
+  }
+}
