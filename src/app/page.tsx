@@ -3,38 +3,43 @@ import Link from "next/link";
 const variations = [
   {
     href: "/v1",
-    name: "Classic Green",
-    tagline: "Faithful to the original brand identity",
-    palette: ["#2E7D32", "#B66E41", "#F4F5F7", "#1F2933"],
-    desc: "Deep forest green header, warm brown accents, clean white body. Professional and on-brand.",
+    name: "Brutalist Editorial",
+    tagline: "Raw · Confrontational · Anti-design as design",
+    palette: ["#000000", "#FFE500", "#FF2200", "#FFFFFF"],
+    desc: "Bebas Neue headlines, electric yellow accents, newspaper grid, scrolling ticker, glitch hover effects. Bold and unapologetic.",
+    font: "Bebas Neue + Space Grotesk",
   },
   {
     href: "/v2",
-    name: "Bold & Industrial",
-    tagline: "High-contrast contractor energy",
-    palette: ["#0F1A0F", "#4ADE80", "#F59E0B", "#E5E7EB"],
-    desc: "Near-black background, electric green + amber accents. Heavy type, built for impact.",
+    name: "Aurora Glassmorphism",
+    tagline: "Dreamy · Ethereal · Soft tech",
+    palette: ["#07071a", "#7c3aed", "#38bdf8", "#34d399"],
+    desc: "Syne + Plus Jakarta Sans, animated aurora gradient mesh, frosted glass cards, glowing orbs, floating elements.",
+    font: "Syne + Plus Jakarta Sans",
   },
   {
     href: "/v3",
-    name: "Rustic Warmth",
-    tagline: "Earthy tones, ranch & farm aesthetic",
-    palette: ["#FAF7F0", "#6B4E2A", "#8A7355", "#3B2F1E"],
-    desc: "Cream base with deep brown and olive tones. Grounded, honest, land-forward.",
+    name: "Organic Botanical",
+    tagline: "Earthy · Rooted · Artisanal",
+    palette: ["#faf6f0", "#c17e42", "#2d1f0e", "#7B9E87"],
+    desc: "Playfair Display serifs, diagonal clip-path sections, slow-pan hero, warm organic palette with leaf animations.",
+    font: "Playfair Display + Nunito",
   },
   {
     href: "/v4",
-    name: "Modern Minimal",
-    tagline: "Clean whitespace, refined simplicity",
-    palette: ["#FFFFFF", "#166534", "#D1FAE5", "#111827"],
-    desc: "All white canvas, sparse forest green accents, generous spacing. Premium and understated.",
+    name: "Swiss Bauhaus",
+    tagline: "Geometric · Systematic · Precise",
+    palette: ["#f2ede6", "#1a1a1a", "#D62B00", "#003399"],
+    desc: "Barlow Condensed + IBM Plex Sans, strict grid with color blocking, Bauhaus red & blue, architectural typography.",
+    font: "Barlow Condensed + IBM Plex Sans",
   },
   {
     href: "/v5",
-    name: "Dark Premium",
-    tagline: "Night-mode luxury feel",
-    palette: ["#0A1628", "#059669", "#D97706", "#F9FAFB"],
-    desc: "Deep navy-black background, emerald + amber accents. Sophisticated and bold.",
+    name: "Luxury Editorial",
+    tagline: "Refined · Magazine · Haute",
+    palette: ["#0d0d0d", "#c9a84c", "#f0ead8", "#2a2a2a"],
+    desc: "Cormorant Garamond serifs, aged gold shimmer, split-screen hero, thin gold dividers, magazine layout with corner accents.",
+    font: "Cormorant Garamond + Montserrat",
   },
 ];
 
@@ -93,6 +98,7 @@ export default function Home() {
               <h2 className="text-base font-semibold mb-1 text-white group-hover:text-white/90">{v.name}</h2>
               <p className="text-xs text-white/40 mb-3 uppercase tracking-wider">{v.tagline}</p>
               <p className="text-sm text-white/55 leading-relaxed flex-1">{v.desc}</p>
+              <p className="text-xs text-white/25 mt-3 font-mono">{v.font}</p>
 
               <div className="mt-6 flex items-center gap-2 text-sm font-medium text-white/60 group-hover:text-white transition-colors">
                 View design

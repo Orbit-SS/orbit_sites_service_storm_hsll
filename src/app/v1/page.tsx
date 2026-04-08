@@ -1,148 +1,302 @@
+"use client";
 import Link from "next/link";
 
 export default function V1() {
   return (
-    <div style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif", color: "#2F2F2F", background: "#FFFFFF" }}>
+    <>
+      <style dangerouslySetInnerHTML={{ __html: `
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
-      {/* Back */}
-      <div style={{ background: "#2E7D32", borderBottom: "1px solid rgba(0,0,0,0.1)" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 1rem" }}>
-          <Link href="/" style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.8rem", textDecoration: "none", display: "inline-block", padding: "0.4rem 0" }}>
-            ← All variations
+        .v1-root * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        .v1-root {
+          font-family: 'Space Grotesk', sans-serif;
+          background: #fff;
+          color: #000;
+          overflow-x: hidden;
+        }
+
+        /* Glitch effect */
+        @keyframes glitch {
+          0%, 100% { transform: translate(0); }
+          20% { transform: translate(-3px, 2px); }
+          40% { transform: translate(3px, -2px); }
+          60% { transform: translate(-2px, -1px); }
+          80% { transform: translate(2px, 1px); }
+        }
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        @keyframes barFill {
+          from { width: 0; }
+          to { width: 100%; }
+        }
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .v1-headline:hover { animation: glitch 0.3s ease infinite; cursor: default; }
+        .v1-marquee-inner { animation: marquee 18s linear infinite; }
+        .v1-card:hover .v1-card-bar { animation: barFill 0.4s ease forwards; }
+        .v1-btn-main {
+          background: #FFE500;
+          color: #000;
+          border: 3px solid #000;
+          padding: 14px 36px;
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 1.3rem;
+          letter-spacing: 0.1em;
+          text-decoration: none;
+          display: inline-block;
+          transition: all 0.1s;
+          clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+        }
+        .v1-btn-main:hover { background: #000; color: #FFE500; transform: translate(2px, 2px); }
+        .v1-btn-outline {
+          background: transparent;
+          color: #000;
+          border: 3px solid #000;
+          padding: 14px 36px;
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 1.3rem;
+          letter-spacing: 0.1em;
+          text-decoration: none;
+          display: inline-block;
+          transition: all 0.1s;
+        }
+        .v1-btn-outline:hover { background: #000; color: #fff; transform: translate(2px, 2px); }
+        .v1-service-card {
+          border: 3px solid #000;
+          background: #fff;
+          overflow: hidden;
+          position: relative;
+          transition: transform 0.1s;
+        }
+        .v1-service-card:hover { transform: translate(-4px, -4px); box-shadow: 4px 4px 0 #000; }
+        .v1-service-card:nth-child(2) { margin-top: 40px; }
+        .v1-tag {
+          display: inline-block;
+          background: #FFE500;
+          border: 2px solid #000;
+          padding: 2px 10px;
+          font-family: 'Space Grotesk', sans-serif;
+          font-size: 0.7rem;
+          font-weight: 700;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+        }
+        .v1-nav-link {
+          color: #fff;
+          text-decoration: none;
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 1.1rem;
+          letter-spacing: 0.1em;
+          padding: 4px 0;
+          border-bottom: 3px solid transparent;
+          transition: border-color 0.15s;
+        }
+        .v1-nav-link:hover { border-bottom-color: #FFE500; }
+        .v1-fade-up { animation: fadeUp 0.7s ease both; }
+      `}} />
+
+      <div className="v1-root">
+
+        {/* TICKER */}
+        <div style={{ background: "#FFE500", borderBottom: "3px solid #000", overflow: "hidden", whiteSpace: "nowrap", padding: "8px 0" }}>
+          <div className="v1-marquee-inner" style={{ display: "inline-flex", gap: "3rem" }}>
+            {Array(6).fill(0).map((_, i) => (
+              <span key={i} style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.95rem", letterSpacing: "0.2em", color: "#000" }}>
+                SITE CLEARING &nbsp;✦&nbsp; TREE SERVICES &nbsp;✦&nbsp; FENCING &nbsp;✦&nbsp; ISA CERTIFIED &nbsp;✦&nbsp; CENTRAL FLORIDA &nbsp;✦&nbsp; EST. 2017 &nbsp;✦&nbsp;
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* BACK */}
+        <div style={{ background: "#000", padding: "4px 20px" }}>
+          <Link href="/" style={{ color: "#FFE500", fontSize: "0.75rem", fontWeight: 700, textDecoration: "none", letterSpacing: "0.1em", textTransform: "uppercase" }}>
+            ← Back to Variations
           </Link>
         </div>
-      </div>
 
-      {/* NAV */}
-      <header style={{ position: "sticky", top: 0, zIndex: 40, background: "#2E7D32", boxShadow: "0 2px 6px rgba(0,0,0,0.15)" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 1rem", display: "flex", alignItems: "center", justifyContent: "space-between", height: 60 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://hlsdeland.com/photos/HLSlogo-nobackground.png" alt="HLS" style={{ height: 40, width: "auto" }} />
-            <span style={{ color: "#fff", fontWeight: 700, fontSize: "1rem", textTransform: "uppercase", letterSpacing: "0.1em" }}>Hoag Land Services</span>
-          </div>
-          <nav style={{ display: "flex", gap: "0.25rem" }}>
-            {["About", "Services", "Portfolio", "Contact"].map(l => (
-              <a key={l} href="#" style={{ color: "#fff", padding: "0.3rem 0.75rem", borderRadius: 999, fontSize: "0.9rem", textDecoration: "none" }}>{l}</a>
-            ))}
-          </nav>
-        </div>
-      </header>
-
-      {/* HERO */}
-      <section style={{
-        position: "relative",
-        minHeight: "70vh",
-        display: "flex",
-        alignItems: "center",
-        background: "linear-gradient(135deg, rgba(11,44,25,0.72), rgba(11,44,25,0.52)), url('https://hlsdeland.com/photos/logo_enhanced.png') center/cover no-repeat",
-        color: "#fff",
-        padding: "5rem 1rem",
-      }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", width: "100%" }}>
-          <span style={{
-            display: "inline-block", background: "rgba(255,255,255,0.14)", border: "1px solid rgba(255,255,255,0.18)",
-            padding: "0.25rem 1rem", borderRadius: 999, fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.14em", marginBottom: "1.25rem"
-          }}>Central Florida · Est. 2017</span>
-          <h1 style={{ fontSize: "clamp(2rem,5vw,3rem)", fontWeight: 700, lineHeight: 1.2, margin: "0 0 1rem", maxWidth: 680 }}>
-            Site work, tree services &amp; fencing for Central Florida properties.
-          </h1>
-          <p style={{ color: "rgba(255,255,255,0.85)", fontSize: "1.05rem", maxWidth: 520, margin: "0 0 2rem", lineHeight: 1.6 }}>
-            Residential &amp; commercial land services across DeLand, DeLeon Springs, and surrounding areas.
-          </p>
-          <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-            <a href="#" style={{ background: "#fff", color: "#2E7D32", padding: "0.65rem 1.5rem", borderRadius: 999, fontWeight: 600, fontSize: "0.95rem", textDecoration: "none" }}>Get a free estimate</a>
-            <a href="#" style={{ border: "1px solid rgba(255,255,255,0.5)", color: "#fff", padding: "0.65rem 1.5rem", borderRadius: 999, fontWeight: 500, fontSize: "0.95rem", textDecoration: "none" }}>View services</a>
-          </div>
-        </div>
-      </section>
-
-      {/* SERVICES */}
-      <section style={{ padding: "5rem 1rem", background: "#F4F5F7" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <p style={{ textTransform: "uppercase", letterSpacing: "0.1em", fontSize: "0.8rem", color: "#6B7280", marginBottom: "0.5rem" }}>What we do</p>
-          <h2 style={{ fontSize: "1.9rem", fontWeight: 700, margin: "0 0 2.5rem", color: "#1F2933", borderBottom: "3px solid #B66E41", display: "inline-block", paddingBottom: "0.5rem" }}>Services</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
-            {[
-              { title: "Site Services", desc: "Land clearing, grading, excavation, erosion control and environmental services from an acre to hundreds.", img: "https://hlsdeland.com/photos/site1.JPEG" },
-              { title: "Tree Services", desc: "ISA Certified Arborist on staff. Removals, trimming, palm pruning and tree installation done safely.", img: "https://hlsdeland.com/photos/tree5.JPEG" },
-              { title: "Fence Services", desc: "Wood, vinyl and aluminum fencing for perimeter, pasture, privacy and pool applications.", img: "https://hlsdeland.com/photos/fence5.jpeg" },
-            ].map(s => (
-              <div key={s.title} style={{ background: "#fff", borderRadius: 10, boxShadow: "0 6px 20px rgba(0,0,0,0.08)", overflow: "hidden", border: "1px solid #E5E7EB", position: "relative" }}>
-                <div style={{ height: 6, background: "linear-gradient(90deg, #B66E41, rgba(182,110,65,0.2))" }} />
-                <div style={{ aspectRatio: "16/10", overflow: "hidden", background: "#111" }}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={s.img} alt={s.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                </div>
-                <div style={{ padding: "1.25rem" }}>
-                  <h3 style={{ fontWeight: 700, fontSize: "1.05rem", margin: "0 0 0.5rem", color: "#1F2933" }}>{s.title}</h3>
-                  <p style={{ color: "#6B7280", fontSize: "0.9rem", margin: "0 0 1rem", lineHeight: 1.6 }}>{s.desc}</p>
-                  <a href="#" style={{ color: "#B66E41", fontSize: "0.9rem", fontWeight: 600, textDecoration: "none" }}>Learn more →</a>
-                </div>
+        {/* NAV */}
+        <header style={{ background: "#000", borderBottom: "4px solid #FFE500", position: "sticky", top: 0, zIndex: 50 }}>
+          <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 68 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo.png" alt="HLS" style={{ height: 42, width: "auto", filter: "invert(1) sepia(1) saturate(5) hue-rotate(5deg)" }} />
+              <div style={{ borderLeft: "3px solid #FFE500", paddingLeft: 12 }}>
+                <div style={{ fontFamily: "'Bebas Neue', sans-serif", color: "#FFE500", fontSize: "1.4rem", letterSpacing: "0.1em", lineHeight: 1 }}>HOAG LAND</div>
+                <div style={{ fontFamily: "'Bebas Neue', sans-serif", color: "#fff", fontSize: "0.75rem", letterSpacing: "0.3em" }}>SERVICES</div>
               </div>
-            ))}
+            </div>
+            <nav style={{ display: "flex", gap: 32 }}>
+              {["Services", "About", "Portfolio", "Contact"].map(l => (
+                <a key={l} href="#" className="v1-nav-link">{l}</a>
+              ))}
+            </nav>
+            <a href="#" className="v1-btn-main" style={{ padding: "10px 24px", fontSize: "1rem" }}>FREE QUOTE</a>
           </div>
-        </div>
-      </section>
+        </header>
 
-      {/* ABOUT STRIP */}
-      <section style={{ padding: "4rem 1rem", background: "#fff" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "3rem", alignItems: "center" }}>
-          <div>
-            <p style={{ textTransform: "uppercase", letterSpacing: "0.1em", fontSize: "0.8rem", color: "#6B7280", marginBottom: "0.5rem" }}>About HLS</p>
-            <h2 style={{ fontSize: "1.75rem", fontWeight: 700, margin: "0 0 1rem", color: "#1F2933" }}>Local, experienced land services in Central Florida.</h2>
-            <p style={{ color: "#4B5563", lineHeight: 1.7, marginBottom: "1rem" }}>
-              HLS officially came to life in 2019 by CEO Tyler Hoag — with over a decade of experience in utility forestry and construction behind it.
+        {/* HERO */}
+        <section style={{ position: "relative", minHeight: "88vh", display: "grid", gridTemplateColumns: "1fr 1fr", overflow: "hidden" }}>
+          {/* Left: Text */}
+          <div style={{ background: "#fff", padding: "5rem 3rem 5rem 2rem", display: "flex", flexDirection: "column", justifyContent: "center", borderRight: "6px solid #000", position: "relative", zIndex: 2 }}>
+            <div style={{ display: "flex", gap: 8, marginBottom: 24 }}>
+              <span className="v1-tag">DeLand, FL</span>
+              <span className="v1-tag">Est. 2017</span>
+            </div>
+            <h1 className="v1-headline" style={{
+              fontFamily: "'Bebas Neue', sans-serif",
+              fontSize: "clamp(4rem, 8vw, 7rem)",
+              lineHeight: 0.95,
+              color: "#000",
+              letterSpacing: "0.02em",
+              marginBottom: 24
+            }}>
+              WE DO
+              <br /><span style={{ color: "#FFE500", WebkitTextStroke: "3px #000" }}>THE DIRTY</span>
+              <br />WORK.
+            </h1>
+            <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "1.1rem", lineHeight: 1.65, color: "#333", maxWidth: 420, marginBottom: 36, fontWeight: 400 }}>
+              Site clearing, tree services, and fencing for Central Florida properties. Commercial &amp; residential. No job too big.
             </p>
-            <p style={{ color: "#4B5563", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-              What began as a single tractor service has grown into a certified arborist tree service and full site operation.
-            </p>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
-              {["ISA Certified Arborist", "Tree Risk Assessment Qualified", "Est. 2017"].map(t => (
-                <span key={t} style={{ background: "rgba(46,125,50,0.08)", color: "#2E7D32", fontSize: "0.8rem", padding: "0.25rem 0.75rem", borderRadius: 999 }}>{t}</span>
+            <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
+              <a href="#" className="v1-btn-main">GET ESTIMATE</a>
+              <a href="tel:+13865610003" className="v1-btn-outline">(386) 561-0003</a>
+            </div>
+            {/* Stats */}
+            <div style={{ display: "flex", gap: 32, marginTop: 48, borderTop: "3px solid #000", paddingTop: 24 }}>
+              {[["7+", "YRS"], ["3", "DIVISIONS"], ["ISA", "CERTIFIED"]].map(([n, l]) => (
+                <div key={l}>
+                  <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "2.2rem", lineHeight: 1, color: "#000" }}>{n}</div>
+                  <div style={{ fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.2em", color: "#666", marginTop: 2 }}>{l}</div>
+                </div>
               ))}
             </div>
           </div>
-          <div style={{ borderRadius: 10, overflow: "hidden", boxShadow: "0 12px 30px rgba(0,0,0,0.1)" }}>
+
+          {/* Right: Image with overlay */}
+          <div style={{ position: "relative", overflow: "hidden" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://hlsdeland.com/photos/site4.PNG" alt="Site work" style={{ width: "100%", height: "auto", display: "block" }} />
+            <img src="/logo_enhanced.png" alt="HLS work" style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(30%) contrast(1.1)" }} />
+            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, transparent 40%, rgba(255,229,0,0.35))" }} />
+            {/* Big text overlay */}
+            <div style={{ position: "absolute", bottom: 40, right: 24, textAlign: "right" }}>
+              <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "6rem", lineHeight: 0.9, color: "#FFE500", textShadow: "4px 4px 0 #000", opacity: 0.9 }}>
+                SITE<br />TREE<br />FENCE
+              </div>
+            </div>
+            {/* Red accent bar */}
+            <div style={{ position: "absolute", top: 0, left: 0, width: 12, height: "100%", background: "#FF2200" }} />
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA BAND */}
-      <section style={{ background: "#2E7D32", padding: "3.5rem 1rem", textAlign: "center" }}>
-        <div style={{ maxWidth: 600, margin: "0 auto" }}>
-          <h2 style={{ color: "#fff", fontSize: "1.75rem", fontWeight: 700, margin: "0 0 0.75rem" }}>Ready to walk through your property?</h2>
-          <p style={{ color: "rgba(255,255,255,0.8)", marginBottom: "1.75rem" }}>Tell us about your project and we&apos;ll schedule a time to visit.</p>
-          <a href="#" style={{ background: "#fff", color: "#2E7D32", padding: "0.7rem 2rem", borderRadius: 999, fontWeight: 700, fontSize: "0.95rem", textDecoration: "none" }}>Contact us</a>
-        </div>
-      </section>
+        {/* SERVICES */}
+        <section style={{ background: "#000", padding: "5rem 24px" }}>
+          <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+            <div style={{ display: "flex", alignItems: "flex-end", gap: 24, marginBottom: 48 }}>
+              <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.85rem", color: "#FFE500", letterSpacing: "0.3em" }}>WHAT WE DO</span>
+              <div style={{ flex: 1, height: 3, background: "#FFE500" }} />
+              <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "4rem", color: "#fff", letterSpacing: "0.05em", lineHeight: 1 }}>SERVICES</h2>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 0 }}>
+              {[
+                { num: "01", title: "SITE SERVICES", desc: "Land clearing, excavation, grading, drainage, erosion control. From 1 acre to 100+. Building pads, roads, ponds, forestry mulching.", img: "/site1.JPEG", accent: "#FFE500" },
+                { num: "02", title: "TREE SERVICES", desc: "ISA Certified Arborist on staff. Removals, trimming, palm pruning, storm cleanup, and tree installation done safely.", img: "/tree5.JPEG", accent: "#FF2200" },
+                { num: "03", title: "FENCE SERVICES", desc: "Wood, vinyl, and aluminum fencing. Perimeter, pasture, privacy, pool, estate fencing — residential and commercial.", img: "/fence5.jpeg", accent: "#FFE500" },
+              ].map((s, i) => (
+                <div key={s.title} className="v1-service-card" style={{ borderColor: "#333", borderTop: `6px solid ${s.accent}`, marginTop: i === 1 ? 40 : 0, background: "#0a0a0a" }}>
+                  <div style={{ aspectRatio: "4/3", overflow: "hidden", position: "relative" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={s.img} alt={s.title} style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(60%) contrast(1.2)", transition: "transform 0.3s, filter 0.3s" }}
+                      onMouseOver={e => { (e.target as HTMLImageElement).style.filter = "grayscale(0%) contrast(1)"; (e.target as HTMLImageElement).style.transform = "scale(1.04)"; }}
+                      onMouseOut={e => { (e.target as HTMLImageElement).style.filter = "grayscale(60%) contrast(1.2)"; (e.target as HTMLImageElement).style.transform = "scale(1)"; }}
+                    />
+                    <div style={{ position: "absolute", top: 12, left: 12, fontFamily: "'Bebas Neue', sans-serif", fontSize: "4rem", color: "rgba(255,255,255,0.12)", lineHeight: 1, pointerEvents: "none" }}>{s.num}</div>
+                  </div>
+                  <div style={{ padding: "24px 20px" }}>
+                    <span className="v1-tag" style={{ background: s.accent, marginBottom: 12 }}>{s.num}</span>
+                    <h3 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.8rem", color: "#fff", letterSpacing: "0.05em", margin: "8px 0 12px" }}>{s.title}</h3>
+                    <p style={{ color: "#999", fontSize: "0.875rem", lineHeight: 1.7, marginBottom: 16 }}>{s.desc}</p>
+                    <a href="#" style={{ color: s.accent, fontFamily: "'Bebas Neue', sans-serif", fontSize: "1rem", letterSpacing: "0.1em", textDecoration: "none" }}>READ MORE →</a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-      {/* FOOTER */}
-      <footer style={{ background: "#101623", color: "#E5E7EB", padding: "3rem 1rem 1.5rem" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: "2rem", marginBottom: "2rem" }}>
-          <div>
-            <p style={{ fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", color: "#fff", marginBottom: "0.5rem" }}>Hoag Land Services</p>
-            <p style={{ fontSize: "0.85rem", color: "#9CA3AF", lineHeight: 1.6 }}>Site work, tree services, and fencing for residential &amp; commercial properties.</p>
-            <p style={{ fontSize: "0.8rem", color: "#6B7280", marginTop: "0.5rem" }}>Serving DeLand, DeLeon Springs &amp; surrounding Central Florida.</p>
+        {/* ABOUT */}
+        <section style={{ background: "#FFE500", borderTop: "6px solid #000", borderBottom: "6px solid #000" }}>
+          <div style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", minHeight: 500 }}>
+            <div style={{ borderRight: "6px solid #000", overflow: "hidden" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/site4.PNG" alt="HLS work" style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(40%) contrast(1.1)" }} />
+            </div>
+            <div style={{ padding: "4rem 3rem", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+                <div style={{ width: 40, height: 6, background: "#000" }} />
+                <span style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "0.9rem", letterSpacing: "0.25em" }}>ABOUT HLS</span>
+              </div>
+              <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "3.5rem", lineHeight: 1, color: "#000", marginBottom: 24 }}>
+                LOCAL.<br />EXPERIENCED.<br />BUILT TO LAST.
+              </h2>
+              <p style={{ fontSize: "1rem", lineHeight: 1.75, color: "#222", marginBottom: 16 }}>
+                Founded by CEO Tyler Hoag in 2019, HLS grew from a single tractor operation into a certified arborist tree service and full site company.
+              </p>
+              <p style={{ fontSize: "1rem", lineHeight: 1.75, color: "#222", marginBottom: 28 }}>
+                Our team is knowledgeable, driven, and durable — built to surpass customer expectations on every property we touch.
+              </p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+                {["ISA Certified Arborist", "Tree Risk Assessment Qualified", "Est. 2017", "Central Florida"].map(t => (
+                  <span key={t} style={{ background: "#000", color: "#FFE500", fontFamily: "'Space Grotesk', sans-serif", fontSize: "0.75rem", fontWeight: 700, padding: "5px 14px", letterSpacing: "0.1em", textTransform: "uppercase" }}>{t}</span>
+                ))}
+              </div>
+            </div>
           </div>
-          <div>
-            <p style={{ fontWeight: 600, color: "#fff", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Services</p>
-            {["Site Services", "Tree Services", "Fence Services"].map(s => (
-              <a key={s} href="#" style={{ display: "block", color: "#9CA3AF", fontSize: "0.85rem", marginBottom: "0.4rem", textDecoration: "none" }}>{s}</a>
-            ))}
+        </section>
+
+        {/* CTA */}
+        <section style={{ background: "#FF2200", padding: "5rem 24px", textAlign: "center", borderBottom: "6px solid #000" }}>
+          <div style={{ maxWidth: 700, margin: "0 auto" }}>
+            <h2 className="v1-headline" style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(3rem,6vw,5.5rem)", color: "#fff", lineHeight: 1, marginBottom: 16, WebkitTextStroke: "2px #000" }}>
+              READY TO TALK?
+            </h2>
+            <p style={{ fontSize: "1.15rem", color: "rgba(255,255,255,0.9)", marginBottom: 36, fontWeight: 500 }}>
+              Walk us through your property and goals — we&apos;ll take it from there.
+            </p>
+            <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
+              <a href="tel:+13865610003" style={{ background: "#FFE500", color: "#000", border: "4px solid #000", padding: "16px 40px", fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.4rem", letterSpacing: "0.08em", textDecoration: "none" }}>
+                (386) 561-0003
+              </a>
+              <a href="mailto:tyler@hlsdeland.com" style={{ background: "#000", color: "#FFE500", border: "4px solid #000", padding: "16px 40px", fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.4rem", letterSpacing: "0.08em", textDecoration: "none" }}>
+                EMAIL US
+              </a>
+            </div>
           </div>
-          <div>
-            <p style={{ fontWeight: 600, color: "#fff", marginBottom: "0.75rem", fontSize: "0.9rem" }}>Contact</p>
-            <p style={{ color: "#9CA3AF", fontSize: "0.85rem", marginBottom: "0.4rem" }}>(386) 561-0003</p>
-            <p style={{ color: "#9CA3AF", fontSize: "0.85rem" }}>tyler@hlsdeland.com</p>
+        </section>
+
+        {/* FOOTER */}
+        <footer style={{ background: "#0a0a0a", borderTop: "4px solid #FFE500", padding: "3rem 24px" }}>
+          <div style={{ maxWidth: 1200, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 24 }}>
+            <div>
+              <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "2rem", color: "#FFE500", letterSpacing: "0.1em" }}>HOAG LAND SERVICES</div>
+              <div style={{ color: "#555", fontSize: "0.8rem", letterSpacing: "0.1em", marginTop: 4 }}>DELAND, FL · (386) 561-0003 · TYLER@HLSDELAND.COM</div>
+            </div>
+            <div style={{ textAlign: "right" }}>
+              <div style={{ display: "flex", gap: 24, marginBottom: 8 }}>
+                {["Site Services", "Tree Services", "Fence Services"].map(s => (
+                  <a key={s} href="#" style={{ color: "#666", fontSize: "0.8rem", textDecoration: "none", fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase" }}>{s}</a>
+                ))}
+              </div>
+              <div style={{ color: "#333", fontSize: "0.75rem" }}>© 2025 Hoag Land Services. All rights reserved.</div>
+            </div>
           </div>
-        </div>
-        <div style={{ borderTop: "1px solid rgba(148,163,184,0.2)", paddingTop: "1.25rem", fontSize: "0.8rem", color: "#6B7280" }}>
-          © 2025 Hoag Land Services. All rights reserved.
-        </div>
-      </footer>
-    </div>
+        </footer>
+      </div>
+    </>
   );
 }
